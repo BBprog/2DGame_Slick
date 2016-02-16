@@ -17,7 +17,9 @@ public class StateGame extends StateBasedGame {
 
     @Override
     public void initStatesList (GameContainer container) throws SlickException {
-        
+        container.setShowFPS (false);
+        addState (new MainScreenGameState ());
+        addState (new PauseState ());
     }
     
     public static void main (String[] argv) throws SlickException {
