@@ -40,9 +40,9 @@ public class MainScreenGameState extends BasicGameState {
     @Override
     public void render (GameContainer container, StateBasedGame game, Graphics g) throws SlickException {
         background.draw (0, 0, container.getWidth (), container.getHeight ());
-        g.drawImage (new Image ("resources/buttons/new_game_button.png"), 230, 230);
-        g.drawImage (new Image ("resources/buttons/load_game_button.png"), 230, 290);
-        g.drawImage (new Image ("resources/buttons/exit_button.png"), 230, 350);
+        g.drawImage (buttons[0], 230, 230);
+        g.drawImage (buttons[1], 230, 290);
+        g.drawImage (buttons[2], 230, 350);
     }
 
     @Override
