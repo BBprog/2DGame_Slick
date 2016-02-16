@@ -10,6 +10,8 @@ import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
+import org.newdawn.slick.state.transition.FadeInTransition;
+import org.newdawn.slick.state.transition.FadeOutTransition;
 
 public class MainScreenGameState extends BasicGameState {
     public static final int ID = 1;
@@ -50,6 +52,6 @@ public class MainScreenGameState extends BasicGameState {
     
     @Override
     public void keyReleased (int key, char c) {
-        //game.enterState (MapGameState.ID);
+        game.enterState (PauseState.ID, new FadeOutTransition(), new FadeInTransition());
     }  
 }
